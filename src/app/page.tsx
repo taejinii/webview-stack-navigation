@@ -10,9 +10,17 @@ export default function Home() {
           window.webkit.messageHandlers.actionHandler.postMessage('test')
       }
   }
+const move = () =>{
+    window.webkit.messageHandlers.navigationHandler.postMessage({
+        action: "push",
+        url: "https://webview-stack-navigation.vercel.app/my-page"
+    });
+}
+
+
   return (
       <div className='flex flex-col'>
-        <button onClick={()=>router.push('my-page')}>Move To Page</button>
+        <button onClick={move}>Move To Page</button>
           <button className='text-sky-700 p-2 bg-blue-200  rounded-md' onClick={handleBridgeCall}>IOS Called</button>
       </div>
   );
