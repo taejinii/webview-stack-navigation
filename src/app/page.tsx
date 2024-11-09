@@ -6,7 +6,7 @@ export default async function Home() {
     const posts = await response.json();
 
   return (
-      <div>
+      <div className='h-full'>
           <PostList posts={posts}/>
       </div>
   );
