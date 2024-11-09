@@ -1,9 +1,6 @@
 'use client'
 
-import {useRouter} from "next/navigation";
-
 export default function Home() {
-  const router = useRouter()
 
   const handleBridgeCall=()=>{
       if(window.webkit){
@@ -11,10 +8,12 @@ export default function Home() {
       }
   }
 const move = () =>{
-    window.webkit.messageHandlers.navigationHandler.postMessage({
-        action: "push",
-        url: "https://webview-stack-navigation.vercel.app/my-page"
-    });
+    if(window.webkit) {
+        window.webkit.messageHandlers.navigationHandler.postMessage({
+            action: "push",
+            url: "https://webview-stack-navigation.vercel.app/my-page"
+        });
+    }
 }
 
 

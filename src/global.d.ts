@@ -6,6 +6,9 @@ declare global{
             messageHandlers:{
                 actionHandler:{
                     postMessage:(param:string)=>void;
+                },
+                navigationHandler:{
+                    postMessage:({action,url}:{action:string;url?:string})=>void;
                 }
             }
         }

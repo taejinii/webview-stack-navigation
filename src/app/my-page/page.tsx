@@ -7,9 +7,11 @@ export default function MyPage(){
 
     const prev = () =>{
 // 이전 페이지로 돌아가기
-        window.webkit.messageHandlers.navigationHandler.postMessage({
-            action: "pop"
-        });
+        if(window.webkit) {
+            window.webkit.messageHandlers.navigationHandler.postMessage({
+                action: "pop"
+            });
+        }
     }
 
     return(
