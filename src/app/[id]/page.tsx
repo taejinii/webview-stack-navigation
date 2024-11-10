@@ -18,9 +18,12 @@ export default async function PostDetail({ params }: { params: Promise<Params> }
             <div className="max-w-2xl w-full p-6 bg-white rounded-lg shadow-lg">
                 <h1 className="text-2xl font-bold text-gray-900 mb-4">{post.title}</h1>
                 <p className="text-gray-700 leading-relaxed">{post.body}</p>
-                <BackButton/>
-                <TestButton/>
-                <WebPushButton/>
+                <div className='flex flex-col gap-1'>
+                    <BackButton/>
+                    <TestButton/>
+                    <WebPushButton/>
+                </div>
+
             </div>
         </div>
     );
