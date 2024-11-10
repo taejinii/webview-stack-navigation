@@ -1,5 +1,7 @@
 "use client"
 
+import Button from "@/components/Button";
+
 export default function BackButton(){
     const nativeBack = () =>{
         if(window.webkit) {
@@ -8,6 +10,6 @@ export default function BackButton(){
             });
         }
     }
-    return <button className='text-sky-700 p-2 bg-blue-200  rounded-md' onClick={nativeBack}>네이티브 뒤로가기 버튼</button>
+    return <Button onClick={nativeBack}>네이티브 뒤로가기 버튼</Button>
 
 }

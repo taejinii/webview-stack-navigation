@@ -1,5 +1,6 @@
 import { Post } from "@/app/post-list";
 import BackButton from "@/app/[id]/back-button";
+import TestButton from "@/app/[id]/test-button";
 
 interface Params {
     id: string;
@@ -17,6 +18,7 @@ export default async function PostDetail({ params }: { params: Promise<Params> }
                 <h1 className="text-2xl font-bold text-gray-900 mb-4">{post.title}</h1>
                 <p className="text-gray-700 leading-relaxed">{post.body}</p>
                 <BackButton/>
+                <TestButton/>
             </div>
         </div>
     );
