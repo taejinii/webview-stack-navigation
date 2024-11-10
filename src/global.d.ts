@@ -8,7 +8,7 @@ declare global{
                     postMessage:(param:string)=>void;
                 },
                 navigationHandler:{
-                    postMessage:({action,url}:{action:string;url?:string})=>void;
+                    postMessage:({action,url}:{action:string;url?:string,steps?:number})=>void;
                 }
             }
         }

@@ -6,7 +6,8 @@ export default function HomeButton() {
     const moveToHome=()=>{
         if(window.webkit){
             window.webkit.messageHandlers.navigationHandler.postMessage({
-                action:"pop"
+                action:"pop",
+                steps:2
             })
         }
     }
