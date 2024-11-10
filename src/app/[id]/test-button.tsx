@@ -12,5 +12,5 @@ export default function TestButton() {
             });
         }
     };
-    return <Button onClick={nativePush}>테스트 페이지 이동</Button>
+    return <Button onClick={nativePush}>Native Push Button</Button>
 }

@@ -1,6 +1,7 @@
 import { Post } from "@/app/post-list";
 import BackButton from "@/app/[id]/back-button";
 import TestButton from "@/app/[id]/test-button";
+import WebPushButton from "@/app/[id]/web-push-button";
 
 interface Params {
     id: string;
@@ -19,6 +20,7 @@ export default async function PostDetail({ params }: { params: Promise<Params> }
                 <p className="text-gray-700 leading-relaxed">{post.body}</p>
                 <BackButton/>
                 <TestButton/>
+                <WebPushButton/>
             </div>
         </div>
     );

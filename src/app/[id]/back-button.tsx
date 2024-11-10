@@ -10,6 +10,6 @@ export default function BackButton(){
             });
         }
     }
-    return <Button onClick={nativeBack}>네이티브 뒤로가기 버튼</Button>
+    return <Button onClick={nativeBack}>Native Back Button</Button>
 
 }

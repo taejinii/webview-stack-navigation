@@ -11,5 +11,5 @@ export default function HomeButton() {
             })
         }
     }
-    return <Button onClick={moveToHome}>초기화면으로 돌아가기</Button>
+    return <Button onClick={moveToHome}>Native 2 steps pop Button</Button>
 }
